@@ -1,9 +1,8 @@
 #include <unistd.h>
 
-
-int     pva(char *s, int pos, char c)
+int pva(char *s, int pos, char c)
 {
-    int     i;
+    int i;
 
     i = 0;
     while (i < pos)
@@ -17,10 +16,10 @@ int     pva(char *s, int pos, char c)
     return (1);
 }
 
-void ft_union(char *s1, char *s2)
+void    display(char *s1, char *s2)
 {
-    int     i;
-    int     j;
+    int i;
+    int j;
 
     i = 0;
     while (s1[i])
@@ -32,17 +31,17 @@ void ft_union(char *s1, char *s2)
     j = 0;
     while (s2[j])
     {
-        if (pva(s1, i, s2[j]) && pva(s2, j , s2[j]))
+        if (pva(s1, i, s2[j]) && pva(s2, j, s2[j]))
             write (1, &s2[j], 1);
         j++;
     }
 }
 
-int     main(int ac, char **av)
+int main(int ac, char **av)
 {
     if (ac == 3)
     {
-        ft_union(av[1], av[2]);
+        display(av[1], av[2]);
     }
     write (1, "\n", 1);
     return (0);

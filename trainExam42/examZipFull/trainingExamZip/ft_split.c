@@ -76,6 +76,12 @@ int	main(void)
 		printf("%s\n", warr[i]);
 		i++;
 	}
+	i = 0;
+	while (warr[i])
+	{
+		free (warr[i]);
+		i++;
+	}
 	free (warr);
 	return (0);
 }

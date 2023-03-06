@@ -16,6 +16,7 @@ t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
     while (lst->next)
     {
         if (!(*cmp)(*(int *)lst->content, *(int *)lst->next->content))
+        //if (!(*cmp)((int *)lst->content, (int *)lst->next->content)) EXAMEN
         {
             tmp = lst->content;
             lst->content = lst->next->content;

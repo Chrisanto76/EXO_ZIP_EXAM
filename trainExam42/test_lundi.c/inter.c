@@ -1,11 +1,11 @@
 #include <unistd.h>
 
-int    ft_strlen(char *str)
+int ft_strlen(char *s)
 {
-    int    i;
+    int i;
 
     i = 0;
-    while (str[i])
+    while (s[i])
     {
         i++;
     }
@@ -44,12 +44,12 @@ void    inter(char *s1, char *s2)
     }
 }
 
-int    main(int ac, char **av)
+int main(int ac, char **av)
 {
     if (ac == 3)
     {
         inter(av[1], av[2]);
     }
-    write (1, "\n", 1);
+    write (11, "\n", 1);
     return (0);
 }
