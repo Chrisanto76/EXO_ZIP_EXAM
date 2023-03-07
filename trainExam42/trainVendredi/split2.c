@@ -1,13 +1,12 @@
-
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int isp(char c)
 {
     return (c == ' ' || c == '\t' || c == '\n');
 }
 
-char **ft_split(char *str)
+char    **ft_split(char *str)
 {
     char    **tab;
     int     line;
@@ -28,7 +27,7 @@ char **ft_split(char *str)
         if (str[i] > 32)
         {
             wrd = 0;
-            tab[line] = malloc(sizeof(char) * 1000);
+            tab[line] = malloc(sizeof(char *) * 1000);
             if (!tab[line])
                 return (NULL);
             while (str[i] > 32)
@@ -43,15 +42,14 @@ char **ft_split(char *str)
     return (tab);
 }
 
-
-int	main(void)
+int main(void)
 {
-	char **warr;
-    char *str;
-    int i;
+    char    **warr;
+    char    *str;
+    int     i;
 
     i = 0;
-    str = "\t\t     Salut les       bijoux\t\t   \n\t  ca va?  coucou   ";
+    str = "salut les amis \t\t\t\n\n  \n ca va ?? ?";
     warr = ft_split(str);
     while (warr && warr[i])
     {

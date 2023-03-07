@@ -9,9 +9,9 @@ int isp(char c)
 char    **ft_split(char *str)
 {
     char    **tab;
-    int line;
-    int wrd;
-    int i;
+    int     line;
+    int     wrd;
+    int     i;
 
     i = 0;
     line = 0;
@@ -31,14 +31,14 @@ char    **ft_split(char *str)
             if (!tab[line])
                 return (NULL);
             while (str[i] > 32)
-            tab[line][wrd++] = str[i++];
-                tab[line][wrd] = '\0';
+                tab[line][wrd++] = str[i++];
+                    tab[line][wrd] = '\0';
             line++;
-
         }
         else
             i++;
     }
+    tab[line] = NULL;
     return (tab);
 }
 

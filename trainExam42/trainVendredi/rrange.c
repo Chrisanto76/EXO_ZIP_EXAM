@@ -12,14 +12,14 @@ int     *ft_rrange(int start, int end)
         len = end - start;
     else
         len = start - end;
-    tab = (int *) malloc(sizeof(* tab) * (len + 1));
+    tab = (int *) malloc(sizeof(*tab) * (i + 1));
     if (!tab)
         return (NULL);
     while (i < len + 1)
     {
         if (start <= end)
             tab[i] = end - i;
-        else
+        else    
             tab[i] = end + i;
         i++;
     }
@@ -33,11 +33,11 @@ int main(void)
     int end;
     int i;
 
-    start = 1;
-    end = 3;
+    start = 2;
+    end = 9;
     printf ("\nREVERSE RANGE OF (%d, %d) RETURNS....", start, end);
     tab = ft_rrange(start, end);
-    while (i < 3)
+    while (i <= 9)
     {
         printf ("|%d|", tab [i]);
         i++;

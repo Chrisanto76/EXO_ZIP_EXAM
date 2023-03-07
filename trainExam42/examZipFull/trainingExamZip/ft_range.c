@@ -38,7 +38,7 @@ int	*ft_range(int start, int end)
 	return (tab);
 }
 
-/*
+
 int	main()
 {
 	int	*tab;
@@ -56,5 +56,6 @@ int	main()
 		printf("%d, ", tab[i]);
 		i++;
 	}
+	free (tab);
 	return (0);
-}*/
+}
