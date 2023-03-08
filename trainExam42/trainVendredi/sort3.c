@@ -7,12 +7,13 @@ int ascending(int a, int b)
 
 t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
 {
-   t_list *head = lst;
-   int  tmp;
+    t_list  *head;
+    int     tmp;
 
-   while (lst->next)
-   {
-        if ((!(*cmp)(lst->data, lst->next->data)))
+    head = lst;
+    while (lst->next)
+    {
+        if (!(* cmp)(lst->data, lst->next->data))
         {
             tmp = lst->data;
             lst->data = lst->next->data;
@@ -20,11 +21,9 @@ t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
             lst = head;
         }
         else
-        {
             lst = lst->next;
-        }
-   }
-   return (head);
+    }
+    return (head);
 }
 
 int     main(void)
@@ -69,5 +68,3 @@ int     main(void)
 	}
 	return (0);
 }
-
-

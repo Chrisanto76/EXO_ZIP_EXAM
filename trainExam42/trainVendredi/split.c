@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 int isp(char c)
 {
     return (c == ' ' || c == '\t' || c == '\n');
@@ -42,14 +43,14 @@ char    **ft_split(char *str)
     return (tab);
 }
 
-int main(void)
+int     main(void)
 {
     char    **warr;
     char    *str;
     int     i;
 
     i = 0;
-    str = "   \t\t\n  Hello, Comment\t ca va les    amis ? en forme ?\n cool !";
+    str = "Hello World \n\t   How \t Are You \t Today ? ???   ";
     warr = ft_split(str);
     while (warr && warr[i])
     {
@@ -59,7 +60,7 @@ int main(void)
     i = 0;
     while (warr[i])
     {
-        free(warr[i]);
+        free (warr[i]);
         i++;
     }
     free (warr);

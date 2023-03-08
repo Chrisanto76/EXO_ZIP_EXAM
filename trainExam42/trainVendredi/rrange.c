@@ -3,23 +3,23 @@
 
 int     *ft_rrange(int start, int end)
 {
-    int *tab;
-    int len;
-    int i;
+    int     *tab;
+    int     len;
+    int     i;
 
     i = 0;
     if (start <= end)
         len = end - start;
     else
         len = start - end;
-    tab = (int *) malloc(sizeof(*tab) * (i + 1));
+    tab = (int *) malloc(sizeof(* tab) * (len + 1));
     if (!tab)
         return (NULL);
     while (i < len + 1)
     {
         if (start <= end)
             tab[i] = end - i;
-        else    
+        else
             tab[i] = end + i;
         i++;
     }
@@ -28,18 +28,19 @@ int     *ft_rrange(int start, int end)
 
 int main(void)
 {
-    int *tab;
-    int start;
-    int end;
-    int i;
+    int     *tab;
+    int     start;
+    int     end;
+    int     i;
 
-    start = 2;
-    end = 9;
-    printf ("\nREVERSE RANGE OF (%d, %d) RETURNS....", start, end);
+    i = 0;
+    start = 1;
+    end = 3;
     tab = ft_rrange(start, end);
-    while (i <= 9)
+    printf ("REVERSE RANGE OF (%d, %d)RETURNS ARRAY CONTAINING :", start, end);
+    while (i < 3)
     {
-        printf ("|%d|", tab [i]);
+        printf ("|%d|", tab[i]);
         i++;
     }
     free (tab);

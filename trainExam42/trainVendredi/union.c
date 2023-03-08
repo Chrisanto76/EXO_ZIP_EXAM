@@ -1,5 +1,6 @@
 #include <unistd.h>
 
+
 int pva(char *s, int pos, char c)
 {
     int i;
